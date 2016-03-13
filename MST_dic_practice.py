@@ -1,4 +1,4 @@
-from graph import Graph
+from module.graph import Graph
 
 g = Graph()
 g.addVert('A')
