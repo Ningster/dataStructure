@@ -26,3 +26,17 @@ class Graph():
                 minV = str(v)
         #return minV,minNode
         return minNode
+    def checkCycle(self, current, currentFrom):
+        checkedList = []
+        result = True
+        nextList = self.graph[current]
+            for nextVert in nextList:
+                if nextVert != currentFrom:
+                    for x in checkedList:
+                        if x == nextVert:
+                            result = False
+                            break
+                    else:
+                        checkdList.append(currentFrom)
+                        self.checkCycle(nextVert, current)
+            return result
